@@ -8,6 +8,7 @@ jQuery plugin to parse a HTML-form and send it using the Mandrill API.
 <script type="text/javascript" src="js/jquery.emailMandrill.js"></script>
 ```
 
+**Make sure the `input`-fields have a unique `name`-attribute:**
 ```html
 <form id="contact-form">
   Name: <input type="text" name="name">
@@ -16,9 +17,7 @@ jQuery plugin to parse a HTML-form and send it using the Mandrill API.
   Message: <textarea name="message" id="message" cols="30" rows="10"></textarea>
 </form>
 ```
-**Make sure the `input`-fields have a unique `name`-attribute.**
-
-*Optional:* add a `data-name`-attribute to add proper labels in the emails.
+*Optional:* use a `data-name`-attribute to add proper labels in the emails.
 
 
 ```js
