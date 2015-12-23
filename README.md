@@ -1,19 +1,12 @@
 #jQuery Mandrill Plugin
 jQuery plugin to parse a HTML-form and send it using the Mandrill API.
 
-##Dependencies
-- jQuery
-- Mandrill API
-
 ##Quick Start
 ```html
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/mandrill.min.js"></script>
 <script type="text/javascript" src="js/jquery.emailMandrill.js"></script>
 ```
-
-**Add a `form`. Make sure the `input`-fields have a unique `name`-attribute:**
-*Optional: add a `data-name`-attribute to add proper labels in the emails.*
 
 ```html
 <form id="contact-form">
@@ -23,6 +16,10 @@ jQuery plugin to parse a HTML-form and send it using the Mandrill API.
   Message: <textarea name="message" id="message" cols="30" rows="10"></textarea>
 </form>
 ```
+**Make sure the `input`-fields have a unique `name`-attribute.**
+
+*Optional:* add a `data-name`-attribute to add proper labels in the emails.
+
 
 ```js
 $(function() {
