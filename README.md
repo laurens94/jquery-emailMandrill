@@ -12,10 +12,13 @@ jQuery plugin to parse a HTML-form and send it using the Mandrill API.
 <script type="text/javascript" src="js/jquery.emailMandrill.js"></script>
 ```
 
+*Add a `form. Make sure the `input`-fields have a unique `name`-attribute:*
+Optional: add a `data-name`-attribute to add proper labels in the emails.
+
 ```html
-<form data-mailform="my-contact-form">
+<form id="contact-form">
   Name: <input type="text" name="name">
-  Email address: <input type="text" name="email">
+  Email address: <input type="text" name="email" data-name="Email address">
   Subject: <input type="text" name="subject">
   Message: <textarea name="message" id="message" cols="30" rows="10"></textarea>
 </form>
@@ -23,23 +26,25 @@ jQuery plugin to parse a HTML-form and send it using the Mandrill API.
 
 ```js
 $(function() {
-    $('[data-mailform]').emailMandrill({
-        mandrillKey: '', // Mandrill API key
+
+    $('#contact-form').emailMandrill({
+        mandrillKey: 'ADD-YOUR-API-KEY',
         emails: [
             {
-                from: 'yourname@domain.com', // From
-                fromNameField: 'name', // name-attribute of the input field that contains the from-name
-                // fromName: 'John Smith', // From-name in case you don't use an input field for this
-                // toField: '', // name-attribute of the input field that contains the to-email address
-                to: ['mail1@domain.com', 'mail2@domain2.com'], // ['email1', 'email2']
-                // replyTo: 'mail@domain.com', // ['email1', 'email2']
-                replyToField: 'Email address', // name-attribute of the input field that contains the reply-to-email address
-                subject: 'This is the email subject', // Subject
-                headerText: 'Hi there! You received the following data:', // Email header
-                footerText: 'Bye!', // Email footer
+                from: 'yourname@domain.com',
+                fromNameField: 'name',
+                // fromName: 'John Smith',
+                // toField: '',
+                to: ['mail1@domain.com', 'mail2@domain2.com'],
+                // replyTo: 'mail@domain.com',
+                replyToField: 'Email address',
+                subject: 'This is the email subject',
+                headerText: 'Hi there! You received the following data:',
+                footerText: 'Bye!',
             }
         ]
     });
+
 });
 ```
 
