@@ -59,7 +59,7 @@ The `emails`-object accepts the following parameters:
 | `from`          | variable                | The 'from'-emailaddress  | |
 | `fromNameField` | variable                | The `name`-attribute of an `input`-field that contains the name of the sender | |
 | `fromName`      | variable                | The name of the sender in case you don't use `fromNameField` | |
-| `to`            | array                   | The 'from'-email address(ess)  | |
+| `to`            | **array**                   | The 'from'-email address(ess)  | |
 | `toField`       | variable                | The `name`-attribute of an `input`-field that contains the email address of the receiver | |
 | `replyToField`  | variable                | The `name`-attribute of an `input`-field that contains the reply-to email address | |
 | `replyTo`       | variable                | An reply-to email address in case you don't use `replyToField` | |
@@ -68,6 +68,6 @@ The `emails`-object accepts the following parameters:
 | `footerText`    | variable                | The appending text of the mail | |
 | `labelAttribute`| variable                | The attribute on input-fields that contain proper labels | `'data-name'` |
 | `submitSelector`| variable                | Selector of the button that submits the form | `'input[type="submit"]'` |
-| `success`       | function                | Function that executes on success |  |
-| `error`         | function                | Function that executes on error, accepts Mandrill-error-object |  |
-| `wait`          | function                | Function that executes on wait |  |
+| `success`       | **function**                | Function that executes on success |  |
+| `error`         | **function**                | Function that executes on error, accepts Mandrill-error-object |  |
+| `wait`          | **function**                | Function that executes on wait |  |
